@@ -14,3 +14,18 @@ dependencies = [
 
 [tool.uv.sources]
 edgar-funcs = { path = "../edgar-funcs" }
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "pytest-dotenv>=0.5.2",
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = ["tests"]
+pythonpath = ["."]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+env_files = [".env"]
