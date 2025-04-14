@@ -1,0 +1,16 @@
+[project]
+name = "edgar-notebook2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "edgar-funcs",
+    "en-core-web-sm==3.8.0",
+    "marimo>=0.12.8",
+    "polars>=1.27.1",
+    "python-dotenv>=1.1.0",
+]
+
+[tool.uv.sources]
+edgar-funcs = { path = "../edgar-funcs" }
