@@ -272,7 +272,7 @@ wheels = [
 
 [[package]]
 name = "edgar-funcs"
-version = "0.5.3"
+version = "0.5.4"
 source = { directory = "../edgar-funcs" }
 dependencies = [
     { name = "beautifulsoup4" },
