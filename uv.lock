@@ -272,7 +272,7 @@ wheels = [
 
 [[package]]
 name = "edgar-funcs"
-version = "0.5.1"
+version = "0.5.3"
 source = { directory = "../edgar-funcs" }
 dependencies = [
     { name = "beautifulsoup4" },
@@ -318,7 +318,7 @@ requires-dist = [
 [package.metadata.requires-dev]
 dev = [
     { name = "pre-commit", specifier = ">=4.0.1" },
-    { name = "pyright", specifier = "==1.1.398" },
+    { name = "pyright", specifier = "==1.1.399" },
     { name = "pytest", specifier = ">=8.3.0" },
     { name = "pytest-asyncio", specifier = ">=0.24.0" },
     { name = "pytest-cov", specifier = ">=6.0" },

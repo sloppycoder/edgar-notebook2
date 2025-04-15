@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 from edgar_funcs.rag.vectorize import TextChunksWithEmbedding
+from edgar_funcs.edgar import load_filing_catalog
 
 load_dotenv()
 
@@ -42,3 +43,10 @@ def load_pickle(
 
     return None
 
+
+def find_filing(accession_number: str):
+    df_filings = load_filing_catalog("2000-01-01", "2024-12-31")
+    df_filtered = df_filings[df_filings["accession_number"] == accession_number]
+    if len(df_filtered) > 0:
+        return df_filtered.to_dict(orient="records")[0]
+    return None
